@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ruta Estratégica CESDE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --yellow: #FFC000;
+      --black: #111111;
+      --white: #ffffff;
+      --gray: #6b6b6b;
+      --soft: #f5f5f5;
+      --line: rgba(17,17,17,.08);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      background: var(--soft);
+      color: var(--black);
+    }
+
+    body {
+      overflow: hidden;
+    }
+
+    .topbar {
+      position: fixed;
+      top: 18px;
+      left: 18px;
+      right: 18px;
+      z-index: 50;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 14px 18px;
+      background: rgba(255,255,255,.9);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 12px 30px rgba(0,0,0,.08);
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .brand strong {
+      font-size: 1rem;
+      line-height: 1;
+    }
+
+    .brand span {
+      font-size: .82rem;
+      color: var(--gray);
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .btn {
+      text-decoration: none;
+      border-radius: 999px;
+      padding: 12px 18px;
+      font-weight: 600;
+      font-size: .92rem;
+      transition: transform .2s ease, background .2s ease, color .2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+
+    .btn-primary {
+      background: var(--black);
+      color: var(--yellow);
+    }
+
+    .btn-secondary {
+      background: var(--white);
+      color: var(--black);
+      border: 1px solid var(--line);
+    }
+
+    .frame-wrap {
+      position: absolute;
+      inset: 0;
+      padding-top: 88px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      background: var(--white);
+    }
+
+    .fallback {
+      position: absolute;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: linear-gradient(180deg, #ffffff 0%, #f3f3f3 100%);
+      text-align: center;
+    }
+
+    .fallback-card {
+      max-width: 640px;
+      background: rgba(255,255,255,.95);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 36px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.08);
+    }
+
+    .fallback-card h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: .95;
+      letter-spacing: -1px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .fallback-card p {
+      color: var(--gray);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 768px) {
+      .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .actions {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      .frame-wrap {
+        padding-top: 122px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <strong>Ruta Estratégica CESDE</strong>
+      <span>Versión separada del documento principal</span>
+    </div>
+    <div class="actions">
+      <a class="btn btn-secondary" href="./index.html">Volver al índice</a>
+      <a class="btn btn-primary" href="https://cdn.jsdelivr.net/gh/DanielAdcom98/Cesde@51556f497db075e7c80ab9409e6821ec40c520cd/index.html" target="_blank" rel="noopener noreferrer">Abrir en pestaña nueva</a>
+    </div>
+  </header>
+
+  <main class="frame-wrap">
+    <iframe
+      id="rutaFrame"
+      src="https://cdn.jsdelivr.net/gh/DanielAdcom98/Cesde@51556f497db075e7c80ab9409e6821ec40c520cd/index.html"
+      title="Ruta Estratégica CESDE"
+      loading="eager">
+    </iframe>
+
+    <section class="fallback" id="fallback">
+      <div class="fallback-card">
+        <h1>Ruta Estratégica</h1>
+        <p>
+          No fue posible cargar la vista embebida automáticamente desde esta página.
+          Puedes abrir la presentación completa en una pestaña nueva con el botón inferior.
+        </p>
+        <a class="btn btn-primary" href="https://cdn.jsdelivr.net/gh/DanielAdcom98/Cesde@51556f497db075e7c80ab9409e6821ec40c520cd/index.html" target="_blank" rel="noopener noreferrer">Abrir presentación completa</a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const frame = document.getElementById('rutaFrame');
+    const fallback = document.getElementById('fallback');
+
+    const showFallback = () => {
+      fallback.style.display = 'flex';
+      frame.style.display = 'none';
+    };
+
+    setTimeout(() => {
+      try {
+        const frameWindow = frame.contentWindow;
+        if (!frameWindow || frameWindow.location.href === 'about:blank') {
+          showFallback();
+        }
+      } catch (error) {
+        // Si hay restricciones cross-origin pero el iframe sí cargó, no hacemos nada.
+      }
+    }, 2500);
+
+    frame.addEventListener('error', showFallback);
+  </script>
+</body>
+</html>
