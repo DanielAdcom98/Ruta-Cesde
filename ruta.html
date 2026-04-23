@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ruta Estratégica CESDE</title>
+  <title>Ruta | CESDE</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -13,208 +13,294 @@
       --black: #111111;
       --white: #ffffff;
       --gray: #6b6b6b;
-      --soft: #f5f5f5;
+      --soft: #f6f6f6;
       --line: rgba(17,17,17,.08);
+      --shadow: 0 20px 60px rgba(0,0,0,.08);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    html, body {
-      width: 100%;
-      height: 100%;
-      font-family: 'Poppins', sans-serif;
-      background: var(--soft);
-      color: var(--black);
-    }
-
     body {
-      overflow: hidden;
+      font-family: 'Poppins', sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(255,192,0,.18), transparent 30%),
+        linear-gradient(180deg, #ffffff 0%, #f4f4f4 100%);
+      color: var(--black);
+      min-height: 100vh;
     }
 
-    .topbar {
-      position: fixed;
-      top: 18px;
-      left: 18px;
-      right: 18px;
-      z-index: 50;
+    .page {
+      min-height: 100vh;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      gap: 16px;
-      padding: 14px 18px;
-      background: rgba(255,255,255,.9);
-      border: 1px solid var(--line);
-      border-radius: 18px;
+      justify-content: center;
+      padding: 40px 24px;
+    }
+
+    .shell {
+      width: 100%;
+      max-width: 1180px;
+      background: rgba(255,255,255,.88);
       backdrop-filter: blur(10px);
-      box-shadow: 0 12px 30px rgba(0,0,0,.08);
+      border: 1px solid var(--line);
+      border-radius: 32px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
     }
 
-    .brand {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
+    .hero {
+      padding: 72px;
+      position: relative;
     }
 
-    .brand strong {
-      font-size: 1rem;
-      line-height: 1;
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: var(--yellow);
+      color: var(--black);
+      font-size: .9rem;
+      font-weight: 700;
+      margin-bottom: 26px;
     }
 
-    .brand span {
-      font-size: .82rem;
+    h1 {
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      line-height: .95;
+      letter-spacing: -2px;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+    }
+
+    .lead {
+      font-size: 1.05rem;
+      line-height: 1.75;
       color: var(--gray);
+      max-width: 620px;
+      margin-bottom: 34px;
     }
 
     .actions {
       display: flex;
-      align-items: center;
-      gap: 10px;
       flex-wrap: wrap;
-      justify-content: flex-end;
+      gap: 14px;
+      margin-bottom: 38px;
     }
 
     .btn {
+      appearance: none;
+      border: 0;
       text-decoration: none;
       border-radius: 999px;
-      padding: 12px 18px;
+      padding: 16px 24px;
       font-weight: 600;
-      font-size: .92rem;
-      transition: transform .2s ease, background .2s ease, color .2s ease;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
     }
 
-    .btn:hover { transform: translateY(-1px); }
+    .btn:hover { transform: translateY(-2px); }
 
     .btn-primary {
       background: var(--black);
       color: var(--yellow);
+      box-shadow: 0 14px 30px rgba(0,0,0,.14);
     }
 
     .btn-secondary {
-      background: var(--white);
+      background: transparent;
       color: var(--black);
       border: 1px solid var(--line);
     }
 
-    .frame-wrap {
-      position: absolute;
-      inset: 0;
-      padding-top: 88px;
-    }
-
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: 0;
-      background: var(--white);
-    }
-
-    .fallback {
-      position: absolute;
-      inset: 0;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 24px;
-      background: linear-gradient(180deg, #ffffff 0%, #f3f3f3 100%);
-      text-align: center;
-    }
-
-    .fallback-card {
+    .mini-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
       max-width: 640px;
-      background: rgba(255,255,255,.95);
+    }
+
+    .mini-card {
+      background: var(--soft);
       border: 1px solid var(--line);
-      border-radius: 28px;
-      padding: 36px;
-      box-shadow: 0 20px 60px rgba(0,0,0,.08);
+      border-radius: 22px;
+      padding: 18px;
     }
 
-    .fallback-card h1 {
-      font-size: clamp(2rem, 5vw, 3.5rem);
-      line-height: .95;
-      letter-spacing: -1px;
+    .mini-card span {
+      display: block;
+      font-size: .78rem;
       text-transform: uppercase;
-      margin-bottom: 16px;
-    }
-
-    .fallback-card p {
+      letter-spacing: .08em;
       color: var(--gray);
-      line-height: 1.7;
-      margin-bottom: 24px;
+      margin-bottom: 10px;
+      font-weight: 600;
     }
 
-    @media (max-width: 768px) {
-      .topbar {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+    .mini-card strong {
+      font-size: 1rem;
+      line-height: 1.35;
+    }
 
-      .actions {
-        width: 100%;
-        justify-content: flex-start;
-      }
+    .panel {
+      background: var(--black);
+      color: var(--white);
+      padding: 72px 52px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
 
-      .frame-wrap {
-        padding-top: 122px;
-      }
+    .panel::before,
+    .panel::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255,192,0,.12);
+    }
+
+    .panel::before {
+      width: 260px;
+      height: 260px;
+      top: -90px;
+      right: -80px;
+    }
+
+    .panel::after {
+      width: 180px;
+      height: 180px;
+      bottom: -60px;
+      left: -50px;
+    }
+
+    .panel-top {
+      position: relative;
+      z-index: 1;
+    }
+
+    .panel-label {
+      font-size: .85rem;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: rgba(255,255,255,.7);
+      margin-bottom: 18px;
+      font-weight: 600;
+    }
+
+    .panel h2 {
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      line-height: 1.05;
+      letter-spacing: -1px;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+    }
+
+    .panel p {
+      color: rgba(255,255,255,.76);
+      line-height: 1.75;
+      font-size: .98rem;
+      max-width: 380px;
+    }
+
+    .route-card {
+      position: relative;
+      z-index: 1;
+      margin-top: 36px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 28px;
+      padding: 24px;
+    }
+
+    .route-card small {
+      display: block;
+      color: rgba(255,255,255,.55);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .route-card strong {
+      display: block;
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+
+    .route-card a {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--yellow);
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 16px;
+    }
+
+    @media (max-width: 980px) {
+      .shell { grid-template-columns: 1fr; }
+      .hero, .panel { padding: 42px 28px; }
+      .mini-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="brand">
-      <strong>Ruta Estratégica CESDE</strong>
-      <span>Versión separada del documento principal</span>
-    </div>
-    <div class="actions">
-      <a class="btn btn-secondary" href="./index.html">Volver al índice</a>
-      <a class="btn btn-primary" href="https://cdn.jsdelivr.net/gh/DanielAdcom98/Cesde@51556f497db075e7c80ab9409e6821ec40c520cd/index.html" target="_blank" rel="noopener noreferrer">Abrir en pestaña nueva</a>
-    </div>
-  </header>
-
-  <main class="frame-wrap">
-    <iframe
-      id="rutaFrame"
-      src="https://cdn.jsdelivr.net/gh/DanielAdcom98/Cesde@51556f497db075e7c80ab9409e6821ec40c520cd/index.html"
-      title="Ruta Estratégica CESDE"
-      loading="eager">
-    </iframe>
-
-    <section class="fallback" id="fallback">
-      <div class="fallback-card">
-        <h1>Ruta Estratégica</h1>
-        <p>
-          No fue posible cargar la vista embebida automáticamente desde esta página.
-          Puedes abrir la presentación completa en una pestaña nueva con el botón inferior.
+  <main class="page">
+    <section class="shell">
+      <div class="hero">
+        <div class="eyebrow">CESDE · Navegación interna</div>
+        <h1>Ruta</h1>
+        <p class="lead">
+          Página de acceso simple al documento principal. Desde aquí puedes entrar directamente
+          a la Ruta Estratégica completa alojada en la raíz del proyecto.
         </p>
-        <a class="btn btn-primary" href="https://cdn.jsdelivr.net/gh/DanielAdcom98/Cesde@51556f497db075e7c80ab9409e6821ec40c520cd/index.html" target="_blank" rel="noopener noreferrer">Abrir presentación completa</a>
+
+        <div class="actions">
+          <a class="btn btn-primary" href="./">Abrir ruta estratégica</a>
+          <a class="btn btn-secondary" href="https://github.com/DanielAdcom98/Cesde" target="_blank" rel="noopener noreferrer">Ver repositorio</a>
+        </div>
+
+        <div class="mini-grid">
+          <article class="mini-card">
+            <span>Destino</span>
+            <strong>/Cesde</strong>
+          </article>
+          <article class="mini-card">
+            <span>Tipo</span>
+            <strong>Presentación web interactiva</strong>
+          </article>
+          <article class="mini-card">
+            <span>Archivo actual</span>
+            <strong>ruta.html</strong>
+          </article>
+        </div>
       </div>
+
+      <aside class="panel">
+        <div class="panel-top">
+          <div class="panel-label">Acceso rápido</div>
+          <h2>Entrada al documento principal</h2>
+          <p>
+            Esta vista funciona como índice interno sencillo. El contenido completo de la ruta
+            estratégica sigue viviendo en la raíz del sitio.
+          </p>
+        </div>
+
+        <div class="route-card">
+          <small>Disponible ahora</small>
+          <strong>Ruta Estratégica CESDE</strong>
+          <p>Haz clic y entra directo a la presentación principal.</p>
+          <a href="./">Ir a la ruta →</a>
+        </div>
+      </aside>
     </section>
   </main>
-
-  <script>
-    const frame = document.getElementById('rutaFrame');
-    const fallback = document.getElementById('fallback');
-
-    const showFallback = () => {
-      fallback.style.display = 'flex';
-      frame.style.display = 'none';
-    };
-
-    setTimeout(() => {
-      try {
-        const frameWindow = frame.contentWindow;
-        if (!frameWindow || frameWindow.location.href === 'about:blank') {
-          showFallback();
-        }
-      } catch (error) {
-        // Si hay restricciones cross-origin pero el iframe sí cargó, no hacemos nada.
-      }
-    }, 2500);
-
-    frame.addEventListener('error', showFallback);
-  </script>
 </body>
 </html>
