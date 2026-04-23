@@ -13,11 +13,15 @@
       --black: #111111;
       --white: #ffffff;
       --gray: #6b6b6b;
-      --line: rgba(17,17,17,.08);
-      --shadow: 0 20px 60px rgba(0,0,0,.08);
+      --line: rgba(17, 17, 17, 0.08);
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     body {
       font-family: 'Poppins', sans-serif;
@@ -33,7 +37,7 @@
     .card {
       width: 100%;
       max-width: 760px;
-      background: rgba(255,255,255,.92);
+      background: rgba(255, 255, 255, 0.94);
       border: 1px solid var(--line);
       border-radius: 28px;
       box-shadow: var(--shadow);
@@ -55,7 +59,7 @@
 
     h1 {
       font-size: clamp(2.2rem, 5vw, 4rem);
-      line-height: .95;
+      line-height: 0.95;
       text-transform: uppercase;
       letter-spacing: -1.5px;
       margin-bottom: 16px;
@@ -83,10 +87,12 @@
       border-radius: 999px;
       padding: 15px 24px;
       font-weight: 600;
-      transition: transform .2s ease;
+      transition: transform 0.2s ease;
     }
 
-    .btn:hover { transform: translateY(-2px); }
+    .btn:hover {
+      transform: translateY(-2px);
+    }
 
     .btn-primary {
       background: var(--black);
@@ -105,17 +111,23 @@
     <div class="badge">CESDE · Ruta Estratégica</div>
     <h1>Cargando documento</h1>
     <p>
-      Estamos redirigiendo la vista a la versión completa de la Ruta Estratégica.
-      Si no se abre automáticamente, usa uno de los botones de abajo.
+      Estamos abriendo la versión completa de la Ruta Estratégica.
+      Si no se redirige automáticamente, usa el botón principal.
     </p>
     <div class="actions">
-      <a class="btn btn-primary" href="https://cdn.jsdelivr.net/gh/DanielAdcom98/Cesde@51556f497db075e7c80ab9409e6821ec40c520cd/index.html">Abrir ruta completa</a>
-      <a class="btn btn-secondary" href="./index.html">Volver al índice</a>
+      <a
+        class="btn btn-primary"
+        href="https://htmlpreview.github.io/?https://github.com/DanielAdcom98/Cesde/blob/51556f497db075e7c80ab9409e6821ec40c520cd/index.html">
+        Abrir ruta completa
+      </a>
+      <a class="btn btn-secondary" href="./index.html">
+        Volver al índice
+      </a>
     </div>
   </main>
 
   <script>
-    const target = 'https://cdn.jsdelivr.net/gh/DanielAdcom98/Cesde@51556f497db075e7c80ab9409e6821ec40c520cd/index.html';
+    const target = 'https://htmlpreview.github.io/?https://github.com/DanielAdcom98/Cesde/blob/51556f497db075e7c80ab9409e6821ec40c520cd/index.html';
     window.location.replace(target);
   </script>
 </body>
