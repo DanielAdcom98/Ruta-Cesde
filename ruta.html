@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ruta Estratégica CESDE 2025</title>
+  <title>Ruta Estratégica CESDE 2026</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
@@ -346,6 +346,69 @@
       font-weight:600;
     }
 
+
+    /* --- Flow branding + siguientes pasos --- */
+    .brandflow-layout {
+      display:grid;
+      grid-template-columns:285px 1fr;
+      gap:18px;
+      align-items:start;
+      margin-top:6px;
+    }
+    .brandflow-sidebar {
+      background:var(--negro);
+      color:var(--blanco);
+      border-radius:var(--radius);
+      padding:22px;
+      box-shadow:0 10px 30px rgba(0,0,0,.08);
+    }
+    .brandflow-sidebar h3 { color:var(--amarillo); font-size:1.05rem; margin-bottom:14px; text-transform:uppercase; letter-spacing:.4px; }
+    .brandflow-sidebar p { color:#d8d8d8; font-size:.84rem; line-height:1.55; margin-bottom:16px; }
+    .brandflow-board { display:grid; gap:16px; }
+    .brandflow-kpis { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+    .brandflow-kpi { background:var(--gris-claro); border:1px solid var(--gris-borde); border-left:5px solid var(--amarillo); border-radius:var(--radius); padding:15px 16px; min-height:82px; display:flex; flex-direction:column; justify-content:center; }
+    .brandflow-kpi span { display:block; color:var(--gris-medio); font-weight:700; font-size:.72rem; letter-spacing:.45px; text-transform:uppercase; margin-bottom:7px; }
+    .brandflow-kpi strong { color:var(--negro); font-size:1.45rem; line-height:1; }
+    .brandflow-grid { display:grid; grid-template-columns:1.05fr .95fr; gap:16px; }
+    .brand-card { background:var(--blanco); border:1px solid var(--gris-borde); border-radius:var(--radius); padding:18px; box-shadow:0 12px 35px rgba(0,0,0,.04); }
+    .brand-card h3 { font-size:1.02rem; margin-bottom:12px; }
+    .brand-month-row { display:grid; grid-template-columns:70px 1fr 74px; gap:10px; align-items:center; padding:10px 0; border-bottom:1px solid var(--gris-borde); }
+    .brand-month-row:last-child { border-bottom:none; }
+    .brand-month-row strong { color:var(--negro); font-size:.9rem; }
+    .brand-month-track { height:22px; background:#ededed; border-radius:999px; overflow:hidden; border:1px solid #e1e1e1; display:flex; }
+    .brand-month-track span:first-child { background:var(--amarillo); height:100%; }
+    .brand-month-track span:last-child { background:#111; height:100%; }
+    .brand-month-row small { display:block; text-align:right; color:var(--negro); font-weight:700; }
+    .brand-chip-row { display:flex; gap:8px; flex-wrap:wrap; margin-top:10px; }
+    .brand-chip { display:inline-flex; align-items:center; gap:6px; padding:7px 10px; border-radius:999px; border:1px solid var(--gris-borde); background:var(--gris-claro); color:var(--negro); font-size:.75rem; font-weight:700; }
+    .brandflow-list { display:grid; gap:10px; max-height:355px; overflow:auto; padding-right:4px; }
+    .brandflow-item { display:grid; grid-template-columns:1fr 88px 88px 74px; gap:12px; align-items:center; background:var(--gris-claro); border:1px solid var(--gris-borde); border-radius:8px; padding:12px 14px; }
+    .brandflow-item strong { display:block; color:var(--negro); font-size:.85rem; line-height:1.25; margin-bottom:4px; }
+    .brandflow-item small { color:var(--gris-medio); font-size:.72rem; }
+    .brandflow-item .num { text-align:right; color:var(--negro); font-weight:700; font-size:.84rem; }
+    .touchpoint-map { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:12px; }
+    .touchpoint { background:var(--gris-claro); border:1px solid var(--gris-borde); border-top:4px solid var(--amarillo); border-radius:var(--radius); padding:14px; min-height:112px; }
+    .touchpoint h4 { font-size:.88rem; margin-bottom:6px; }
+    .touchpoint p { font-size:.78rem; line-height:1.45; color:var(--gris-oscuro); margin:0; }
+    .steps-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:10px; }
+    .step-card { position:relative; background:var(--gris-claro); border:1px solid var(--gris-borde); border-radius:var(--radius); padding:22px 22px 22px 74px; min-height:176px; overflow:hidden; }
+    .step-number { position:absolute; left:20px; top:22px; width:38px; height:38px; border-radius:50%; background:var(--negro); color:var(--amarillo); display:flex; align-items:center; justify-content:center; font-weight:700; }
+    .step-card h3 { font-size:1.02rem; margin-bottom:8px; }
+    .step-card p { font-size:.86rem; line-height:1.55; margin:0; }
+    .step-card::after { content:''; position:absolute; right:-35px; bottom:-35px; width:110px; height:110px; border-radius:50%; background:rgba(255,192,0,.24); }
+    .next-note { margin-top:18px; display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+    .next-note .callout-mini { background:var(--negro); color:var(--blanco); border-radius:var(--radius); padding:18px 20px; border-left:6px solid var(--amarillo); }
+    .next-note .callout-mini h3 { color:var(--amarillo); font-size:1rem; margin-bottom:6px; }
+    .next-note .callout-mini p { color:#e8e8e8; font-size:.86rem; margin:0; }
+
+    @media(max-width:992px) {
+      .brandflow-layout,.brandflow-grid,.brandflow-kpis,.steps-grid,.next-note { grid-template-columns:1fr; }
+      .touchpoint-map { grid-template-columns:1fr 1fr; }
+      .brandflow-item { grid-template-columns:1fr; }
+      .brandflow-item .num { text-align:left; }
+    }
+    @media(max-width:576px) { .touchpoint-map { grid-template-columns:1fr; } }
+
     @media(max-width:992px) {
       .slide { padding:40px 40px 100px; }
       .slide-top-section { flex-direction:column; gap:10px; }
@@ -386,7 +449,7 @@
       <div class="slide-inner">
         <div class="cover-kicker">CESDE · Ruta Estratégica de Pauta Digital</div>
         <h1>Ruta estratégica<br>2026-2</h1>
-        <p class="body-text">Ruta de inversión, medios, territorios DOOH, audiencias y priorización de programas bajo un presupuesto total de <strong>$169.000.000</strong>.</p>
+        <p class="body-text">Ruta de inversión, medios, audiencias y priorización de programas bajo un presupuesto total de <strong>$169.000.000</strong>.</p>
       </div>
     </section>
 
@@ -802,6 +865,84 @@
         </div>
       </div>
     </section>
+
+    <section class="slide" data-title="Flow branding">
+      <div class="slide-inner">
+        <div class="slide-top-section">
+          <div class="slide-title-col"><div class="slide-header"><h2>Flow branding</h2></div></div>
+          <div class="slide-desc-col">
+            <p class="subtext">DOOH + Display como capa de demanda</p>
+            <p class="body-text">Lectura final del esfuerzo de branding: inversión por formato, presión mensual y zonas/pantallas priorizadas para acompañar la captación de leads.</p>
+          </div>
+        </div>
+        <div class="content-area">
+          <div class="brandflow-layout">
+            <aside class="brandflow-sidebar">
+              <h3>Filtros de lectura</h3>
+              <div class="flow-control"><label>Mes</label><select id="brandMonth" onchange="renderBrandFlow()"><option value="all">Todos</option><option>Abril</option><option>Mayo</option><option>Junio</option><option>Julio</option><option>Agosto</option></select></div>
+              <div class="flow-control"><label>Formato</label><select id="brandFormat" onchange="renderBrandFlow()"><option value="all">Todos</option><option value="DOOH">DOOH</option><option value="Display">Display</option></select></div>
+              <div class="flow-control"><label>Zona</label><select id="brandZone" onchange="renderBrandFlow()"><option value="all">Todas</option><option>Bello</option><option>Medellín</option><option>Itagüí</option><option>Rionegro</option></select></div>
+              <p><strong>Rol:</strong> aumentar recordación y cercanía territorial en zonas de influencia, mientras performance convierte el interés en leads.</p>
+              <div class="brand-chip-row"><span class="brand-chip">70% DOOH</span><span class="brand-chip">30% Display</span><span class="brand-chip">Mayo-Junio pico</span></div>
+            </aside>
+            <div class="brandflow-board">
+              <div class="brandflow-kpis">
+                <div class="brandflow-kpi"><span>Inversión branding</span><strong id="brandTotal">$28,0M</strong></div>
+                <div class="brandflow-kpi"><span>DOOH</span><strong id="brandDooh">$19,6M</strong></div>
+                <div class="brandflow-kpi"><span>Display</span><strong id="brandDisplay">$8,4M</strong></div>
+                <div class="brandflow-kpi"><span>Pantallas</span><strong id="brandScreens">9</strong></div>
+              </div>
+              <div class="brandflow-grid">
+                <div class="brand-card">
+                  <h3>Presión mensual por formato</h3>
+                  <div id="brandMonthRows"></div>
+                  <div class="brand-chip-row"><span class="brand-chip"><span class="dot"></span> DOOH</span><span class="brand-chip"><span class="dot black"></span> Display</span></div>
+                </div>
+                <div class="brand-card">
+                  <h3>Pantallas / zonas</h3>
+                  <div class="brandflow-list" id="brandScreenRows"></div>
+                </div>
+              </div>
+              <div class="brand-card">
+                <h3>Uso del branding dentro del ecosistema</h3>
+                <div class="touchpoint-map">
+                  <div class="touchpoint"><h4>1. Reconocimiento</h4><p>DOOH activa presencia física cerca de zonas de estudio, compra, transporte y tránsito frecuente.</p></div>
+                  <div class="touchpoint"><h4>2. Consideración</h4><p>Display refuerza frecuencia digital con audiencias jóvenes, padres/apoyadores y usuarios en exploración educativa.</p></div>
+                  <div class="touchpoint"><h4>3. Captura</h4><p>Performance capitaliza la demanda generada con mensajes por programa, sede y beneficio.</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="source-note">Branding no se atribuye como lead directo: funciona como capa de recordación, alcance territorial y soporte de conversión para Meta, Google y TikTok.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Siguientes pasos">
+      <div class="slide-inner">
+        <div class="slide-top-section">
+          <div class="slide-title-col"><div class="slide-header"><h2>Siguientes pasos</h2></div></div>
+          <div class="slide-desc-col">
+            <p class="subtext">Cierre operativo para activar la ruta</p>
+            <p class="body-text">Acciones necesarias para pasar de la planeación a implementación, medición y optimización.</p>
+          </div>
+        </div>
+        <div class="content-area">
+          <div class="steps-grid">
+            <div class="step-card"><div class="step-number">01</div><h3>Definir pantallas DOOH</h3><p>Validar disponibilidad, formatos, fechas de pauta, frecuencia estimada y cobertura por centro comercial/zona de influencia.</p></div>
+            <div class="step-card"><div class="step-number">02</div><h3>Desarrollar materiales</h3><p>Adaptar piezas para DOOH, display, Meta, Google y TikTok con mensajes por programa, sede y momento del funnel.</p></div>
+            <div class="step-card"><div class="step-number">03</div><h3>Validar landing</h3><p>Revisar velocidad, formularios, trazabilidad, UTMs, thank you page, eventos y campos necesarios para gestión comercial.</p></div>
+            <div class="step-card"><div class="step-number">04</div><h3>Configurar medición</h3><p>Asegurar píxeles, conversiones, audiencias, remarketing, nomenclaturas, dashboard y tablero de seguimiento por programa.</p></div>
+            <div class="step-card"><div class="step-number">05</div><h3>Activar plan por oleadas</h3><p>Iniciar con presión en mayo-junio para branding y mantener always-on de performance según prioridad de programas.</p></div>
+            <div class="step-card"><div class="step-number">06</div><h3>Optimizar con comercial</h3><p>Cruzar leads, contacto efectivo, matrícula y capacidad por grupo para mover inversión hacia programas con mejor CAC real.</p></div>
+          </div>
+          <div class="next-note">
+            <div class="callout-mini"><h3>Decisiones requeridas</h3><p>Listado final de pantallas, artes aprobados, oferta/mensaje por programa y confirmación de capacidad comercial por sede.</p></div>
+            <div class="callout-mini"><h3>Primer corte recomendado</h3><p>Revisión a los 7-10 días de activación para ajustar CPL, calidad de lead, distribución por medio y programas con mayor tracción.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 
   <div class="nav-controls">
@@ -948,6 +1089,58 @@
       }).join('');
     }
 
+
+
+    const brandMonths = [
+      {mes:'Abril', total:3, dooh:2.1, display:0.9, rol:'Arranque'},
+      {mes:'Mayo', total:10, dooh:7, display:3, rol:'Pico'},
+      {mes:'Junio', total:10, dooh:7, display:3, rol:'Pico'},
+      {mes:'Julio', total:4, dooh:2.8, display:1.2, rol:'Sostenimiento'},
+      {mes:'Agosto', total:1, dooh:0.7, display:0.3, rol:'Cierre'}
+    ];
+    const brandScreensData = [
+      {zona:'Bello', pantalla:'Centro Comercial Puerta del Norte', peso:2.5},
+      {zona:'Bello', pantalla:'Centro Comercial Fabricato', peso:2.5},
+      {zona:'Medellín', pantalla:'Florida Parque Comercial', peso:2.2},
+      {zona:'Medellín', pantalla:'Centro Comercial La Central', peso:2.2},
+      {zona:'Medellín', pantalla:'Centro Comercial Los Molinos', peso:2.2},
+      {zona:'Medellín', pantalla:'Centro Comercial Premium Plaza', peso:2.2},
+      {zona:'Medellín', pantalla:'Centro Comercial Aventura', peso:2.2},
+      {zona:'Itagüí', pantalla:'Centro Comercial Mayorca', peso:2.4},
+      {zona:'Rionegro', pantalla:'Centro Comercial San Nicolás', peso:2.4}
+    ];
+    function renderBrandFlow() {
+      const monthFilter = document.getElementById('brandMonth')?.value || 'all';
+      const formatFilter = document.getElementById('brandFormat')?.value || 'all';
+      const zoneFilter = document.getElementById('brandZone')?.value || 'all';
+      const months = brandMonths.filter(m => monthFilter === 'all' || m.mes === monthFilter);
+      const total = months.reduce((s,m)=>s+m.total,0);
+      const dooh = months.reduce((s,m)=>s+m.dooh,0);
+      const display = months.reduce((s,m)=>s+m.display,0);
+      const screens = brandScreensData.filter(i => zoneFilter === 'all' || i.zona === zoneFilter);
+      document.getElementById('brandTotal') && (document.getElementById('brandTotal').textContent = moneyM(total));
+      document.getElementById('brandDooh') && (document.getElementById('brandDooh').textContent = formatFilter === 'Display' ? '$0,0M' : moneyM(dooh));
+      document.getElementById('brandDisplay') && (document.getElementById('brandDisplay').textContent = formatFilter === 'DOOH' ? '$0,0M' : moneyM(display));
+      document.getElementById('brandScreens') && (document.getElementById('brandScreens').textContent = screens.length);
+      const monthContainer = document.getElementById('brandMonthRows');
+      if (monthContainer) {
+        monthContainer.innerHTML = months.map(m => {
+          const doohW = formatFilter === 'Display' ? 0 : 70;
+          const displayW = formatFilter === 'DOOH' ? 0 : 30;
+          const shownTotal = formatFilter === 'DOOH' ? m.dooh : formatFilter === 'Display' ? m.display : m.total;
+          return `<div class="brand-month-row"><strong>${m.mes}<br><span class="tag ${m.rol === 'Pico' ? 'light' : 'gray'}">${m.rol}</span></strong><div class="brand-month-track"><span style="width:${doohW}%"></span><span style="width:${displayW}%"></span></div><small>${moneyM(shownTotal)}</small></div>`;
+        }).join('') || '<div class="flow-empty">Sin datos para este filtro.</div>';
+      }
+      const screenContainer = document.getElementById('brandScreenRows');
+      if (screenContainer) {
+        screenContainer.innerHTML = screens.map((i, idx) => {
+          const visible = formatFilter === 'Display' ? 0 : i.peso;
+          const displaySupport = formatFilter === 'DOOH' ? 0 : Math.max(.3, i.peso*.3);
+          return `<div class="brandflow-item"><div><strong>${i.pantalla}</strong><small>${i.zona} · Punto DOOH + refuerzo digital</small></div><div class="num">DOOH<br>${moneyM(visible)}</div><div class="num">Display<br>${moneyM(displaySupport)}</div><div class="num">${idx+1}</div></div>`;
+        }).join('') || '<div class="flow-empty">No hay pantallas con esos filtros.</div>';
+      }
+    }
+
     document.addEventListener('keydown', e => {
       if (e.key === 'ArrowRight') changeSlide(1);
       if (e.key === 'ArrowLeft') changeSlide(-1);
@@ -955,6 +1148,7 @@
     });
     buildIndex();
     renderFlow();
+    renderBrandFlow();
     updateSlide();
   </script>
 </body>
