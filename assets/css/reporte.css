@@ -1,0 +1,72 @@
+﻿  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #f0f2f5;
+    color: #1c1e21;
+    padding: 32px 24px;
+  }
+  header {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  header h1 {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+  }
+  header .meta {
+    font-size: 14px;
+    color: #606770;
+  }
+  .program-section {
+    max-width: 1200px;
+    margin: 0 auto 48px;
+  }
+  .program-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #050505;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #1877f2;
+    display: inline-block;
+  }
+  .ads-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 16px;
+  }
+  .ad-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,.12);
+  }
+  .ad-thumb {
+    aspect-ratio: 1 / 1;
+    background: #e4e6eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .ad-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .no-preview {
+    font-size: 11px;
+    color: #8a8d91;
+  }
+  .ad-name {
+    font-size: 11px;
+    color: #444;
+    padding: 8px 10px;
+    line-height: 1.4;
+  }
