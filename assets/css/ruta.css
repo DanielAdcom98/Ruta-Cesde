@@ -411,6 +411,8 @@
     .bp-aud-pills { display:flex; flex-wrap:wrap; gap:3px; }
     .bp-aud-pills span { font-size:.62rem; padding:1px 7px; border-radius:999px; background:var(--blanco); border:1px solid var(--gris-borde); color:var(--gris-oscuro); line-height:1.6; white-space:nowrap; }
     .bp-aud-claim { margin:9px 0 0; font-size:.67rem; font-style:italic; color:var(--gris-medio); line-height:1.5; border-left:2px solid var(--amarillo); padding-left:8px; }
+    .bp-providers-note { margin:18px 0 6px; padding:12px 16px; background:var(--gris-claro); border:1px solid var(--gris-borde); border-left:4px solid var(--amarillo); border-radius:var(--radius); font-size:.78rem; color:var(--gris-oscuro); line-height:1.55; }
+    .bp-providers-note strong { color:var(--negro); }
 
     @media(max-width:992px) {
       .slide { padding:40px 40px 100px; }
